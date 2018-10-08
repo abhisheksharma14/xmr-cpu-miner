@@ -2,7 +2,7 @@
 cd;
 mkdir miner;
 cd miner;
-apt-get install git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev ;
+sudo apt-get install git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev ;
 git clone https://github.com/xmrig/xmrig.git ;
 cd xmrig ;
 mkdir build ;
@@ -46,6 +46,9 @@ then
             ps -ef | grep xmrig | grep -v grep | awk '{print $2}' | xargs kill
         fi
     fi
+else
+    echo Running miner without Check
+    ~/miner/xmrig/build/xmrig -l ./mine.log --donate-level 5 --max-cpu-usage 80 --cpu-priority 4 -o $POOL_URL -u $WALLET -p $PASS -k
 fi
 EOF
 
