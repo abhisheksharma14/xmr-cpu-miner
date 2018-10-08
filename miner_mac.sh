@@ -46,6 +46,9 @@ then
             ps -ef | grep xmrig | grep -v grep | awk '{print $2}' | xargs kill
         fi
     fi
+else
+    echo Running miner without validations
+    ~/miner/xmrig/build/xmrig -l ./mine.log --donate-level 5 --max-cpu-usage 80 --cpu-priority 4 -o $POOL_URL -u $WALLET -p $PASS -k          
 fi
 EOF
 
