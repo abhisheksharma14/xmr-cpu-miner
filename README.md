@@ -1,5 +1,5 @@
 # xmr-cpu-miner
-A small script to setup a CPU miner for monero with features like crontab and minimal monitoring.
+A small script to setup a CPU miner for Monero (XMR) with features like crontab and minimal monitoring.
 
 # Features!
 
@@ -15,9 +15,9 @@ A small script to setup a CPU miner for monero with features like crontab and mi
 
 
 #### You can also:
-  - Manage the schedular according to your requirement. In short, can change the mining hours as per your needs
+  - Manage the scheduler according to your requirement. In short, you can change the mining hours as per your needs
   - Use your custom pool url.
-  - Can turn on and off the automatic mining funtionality with just one flag.
+  - Can turn on/off automatic mining funtionality with just one flag.
 
 
 #### Tech
@@ -46,8 +46,9 @@ $ sh miner_mac.sh # for macOS
 ### Donate
 Monero Wallet Address : `4B16BreLqHCTQ1iYsPTqGWjZyVAh7ZM7FaFEeiKekNME7JptFv9HpZgbvCWD696jgrSBdpBcK7QXA8BLZR5Xtup1AcPKEuK`
 
-or Scan QR code
+OR
 
+Scan QR code
 
 ![](https://raw.githubusercontent.com/abhisheksharma14/xmr-cpu-miner/master/mymonero.png)
 
