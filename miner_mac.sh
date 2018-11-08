@@ -47,8 +47,14 @@ then
         fi
     fi
 else
-    echo Running miner without validations
-    ~/miner/xmrig/build/xmrig -l ./mine.log --donate-level 5 --max-cpu-usage 80 --cpu-priority 4 -o $POOL_URL -u $WALLET -p $PASS -k          
+    RUNNING=$(ps -ef | grep xmrig | grep -v grep | awk '{print $2}')
+    if [ $RUNNING > 0 ]
+    then
+        echo Already Running Miner with PID $RUNNING;
+    else
+        echo echo Running miner with Manual Mode
+        ~/miner/xmrig/build/xmrig -l ./mine.log --donate-level 5 --max-cpu-usage 80 --cpu-priority 4 -o $POOL_URL -u $WALLET -p $PASS -k
+    fi
 fi
 EOF
 
